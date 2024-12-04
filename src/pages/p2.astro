@@ -1,0 +1,17 @@
+---
+// astro
+import { Image } from "astro:assets"
+
+// self
+import Toggle from "!solid/toggle.tsx"
+import Layout from "!layouts/layout.astro"
+import { title } from "!root/consts.js"
+import img from "!assets/20241204_124134-crop.webp"
+---
+<Layout title={title}>
+	<Image src={img} alt="p2" />
+</Layout>
+<ul class="menu menu-horizontal bg-base-200">
+  <li><a href="/p1/">Item 1</a></li>
+  <li><a href="/p2/">Item 2</a></li>
+</ul>

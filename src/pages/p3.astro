@@ -1,0 +1,16 @@
+---
+// astro
+import { Image } from "astro:assets"
+
+// self
+import Layout from "!layouts/layout.astro"
+import { title } from "!root/consts.js"
+import img from "!assets/20241204_124139-crop.webp"
+---
+<Layout title={title}>
+	<Image src={img} alt="p3" />
+</Layout>
+<ul class="menu menu-horizontal bg-base-200">
+  <li><a href="/p1/">Item 1</a></li>
+  <li><a href="/p2/">Item 2</a></li>
+</ul>

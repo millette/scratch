@@ -1,0 +1,20 @@
+---
+// astro
+// import { Image } from "astro:assets"
+import { getImage } from "astro:assets";
+
+// self
+import Toggle from "!solid/toggle.tsx"
+import Layout from "!layouts/layout.astro"
+import { title } from "!root/consts.js"
+import img1 from "!assets/20241204_124128-crop.webp"
+import img2 from "!assets/20241204_124134-crop.webp"
+const size = 200
+const i1 = await getImage({ src: img1, width: size, height: size })
+const i2 = await getImage({ src: img2, width: size, height: size })
+---
+<Layout title={title}>
+	<div class="m-4">
+		<Toggle client:load on={i1.src} off={i2.src} />
+	</div>
+</Layout>
